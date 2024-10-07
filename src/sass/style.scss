@@ -100,6 +100,9 @@ ul {
 		.nav-logo:visited {
 			color: var(--color-text-default);
 		}
+		.nav-logo:hover {
+			color: var(--color-accent-t);
+		}
 
 		.nav-menu {
 			display: flex;
@@ -115,6 +118,9 @@ ul {
 				}
 				.nav-link:visited {
 					color: var(--color-text-link);
+				}
+				.nav-link:hover {
+					color: var(--color-accent-t);
 				}
 			}
 		}
@@ -145,6 +151,10 @@ ul {
 				color: var(--color-text-default);
 				font-size: var(--font-size-large);
 			}
+			button:hover {
+				color: var(--color-accent-t);
+				border: 1px solid var(--color-accent-t);
+			}
 		}
 	}
 
@@ -159,6 +169,10 @@ ul {
 				i {
 					font-size: var(--font-size-x-large);
 				}
+			}
+			button:hover {
+				color: var(--color-accent-t);
+				border: 1px solid var(--color-accent-t);
 			}
 		}
 	}
@@ -185,6 +199,10 @@ main {
 					i {
 						font-size: var(--font-size-x-large);
 					}
+				}
+				button:hover {
+					color: var(--color-accent-t);
+					border: 1px solid var(--color-accent-t);
 				}
 			}
 
@@ -280,6 +298,11 @@ main {
 	border: 1px solid var(--color-text-default-dark);
 	cursor: pointer;
 }
+#prev:hover,
+#next:hover {
+	color: var(--color-accent-t);
+	border: 1px solid var(--color-accent-t);
+}
 
 #cCarousel #prev {
 	left: 0px;
@@ -336,9 +359,64 @@ main {
 			font-size: var(--font-size-x-large);
 			padding: 5px;
 		}
+		button:hover {
+			color: var(--color-accent-t);
+			border: 1px solid var(--color-accent-t);
+		}
 	}
 }
-
+.newsletter {
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background-image: url('../../dist/img/headerBackgroundSmall.jpg');
+	background-position: center;
+	background-size: cover;
+	margin-top: 5vh;
+	h2 {
+		text-transform: uppercase;
+		font-size: var(--font-size-x-display);
+		color: var(--color-text-default);
+	}
+	p {
+		font-size: var(--font-size-large);
+		color: var(--color-text-default);
+		text-align: center;
+		margin: 2vh 20%;
+	}
+	.input-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		button {
+			padding: 1vh 1.5vh;
+			font-size: var(--font-size-large);
+			border-radius: 50px;
+			margin-top: 1vh;
+			border: 1px solid var(--color-text-default);
+			background-color: transparent;
+			color: var(--color-text-default);
+		}
+		button:hover {
+			color: var(--color-accent-t);
+			border: 1px solid var(--color-accent-t);
+		}
+		input {
+			padding: 1vh 2vh;
+			font-size: var(--font-size-large);
+			border-radius: 50px;
+			border: none;
+			background-color: var(--color-accent-t);
+			color: var(--color-text-default);
+		}
+		input::placeholder {
+			color: var(--color-text-default);
+		}
+	}
+}
 @media (max-width: 1200px) {
 	#carousel-vp {
 		width: 510px;
@@ -587,9 +665,13 @@ details[open] .accordion-icon svg {
 	.header {
 		background-image: url(../../dist/img/headerBackgroundLarge.jpg);
 	}
+	.newsletter {
+		background-image: url(../../dist/img/headerBackgroundLarge.jpg);
+	}
 }
 
 @media (min-width: 1200px) {
+	// CAROUSEL //
 	.carousel {
 		.title {
 			justify-content: space-between;
@@ -615,6 +697,7 @@ details[open] .accordion-icon svg {
 			font-size: var(--font-size-x-large);
 		}
 	}
+	// HEADER //
 	.header {
 		background-image: url(../../dist/img/headerBackgroundLarge.jpg);
 
@@ -630,7 +713,7 @@ details[open] .accordion-icon svg {
 			}
 		}
 	}
-
+	// MAIN //
 	main {
 		.products {
 			height: auto;
@@ -648,6 +731,7 @@ details[open] .accordion-icon svg {
 			}
 		}
 	}
+	// ABOUT US //
 	.about_us {
 		flex-direction: row;
 		height: 50vh;
@@ -686,6 +770,31 @@ details[open] .accordion-icon svg {
 			}
 		}
 	}
+	// NEWSLETTER //
+	.newsletter {
+		background-image: url(../../dist/img/headerBackgroundLarge.jpg);
+		p {
+			font-size: var(--font-size-x-large);
+		}
+		.input-box {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: row;
+			width: 100%;
+			height: 10vh;
+			input {
+				width: 20%;
+			}
+			button {
+				border-radius: 50px;
+				width: 10%;
+				margin: 0 30px;
+			}
+		}
+	}
+
+	// FAQ //
 }
 
 @media (max-width: 576px) {
